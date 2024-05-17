@@ -13,7 +13,7 @@ $dolibarr_main_data_root='/var/www/html/master_dev/doc';
 $dolibarr_main_db_host='localhost';
 $dolibarr_main_db_port='3306';
 $dolibarr_main_db_name='master_dev';
-$dolibarr_main_db_prefix='llx_';
+$dolibarr_main_db_prefix='llxas_';
 $dolibarr_main_db_user='root';
 $dolibarr_main_db_pass='VU@L(=X#apo!';
 $dolibarr_main_db_type='mysqli';
