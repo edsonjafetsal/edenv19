@@ -1,0 +1,16 @@
+# Dolibarr language file - fen_US - importline
+CHARSET=UTF-8
+
+Module432439Name = Import lines (proposal/order/invoice)
+Module432439Desc= Import lines from others documents in your proposal and order
+newlinefromother = Add new lines form an other document
+selectpropal = Select the proposal
+selectorder = Select the order
+selectinvoice = Select the invoice
+ImportLineFrom = Import line
+
+ImportlineAbout=About the module
+CAT1= 1st. category
+CAT2= 2nd. category
+CAT3= 3rd. category
+CAT4= 4th. category

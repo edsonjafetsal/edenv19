@@ -1,0 +1,56 @@
+# Dolibarr language file - en_US - supplierpricr
+CHARSET=UTF-8
+
+# NOM DU MODULE
+supplierpricr=SupplierPricR
+SupplierPricRPresentation=Add/update supplier prices from supplier proposals
+
+# ADMIN GENERAL
+NothingToSetup=Enable the module to display the setting page
+GeneralSetup=Global settings
+GeneralSetting=Global settings
+PatasTools=Patas-M tools
+PatasMonkeyTools=Patas-M tools area
+PatasToolsNews=Fins here our news (requires an internet connexion)
+PatasMonkeyPresent=This module is a creation of Patas-monkey. You will find a user guide on our website.
+MoreModulesLink=Find all our module on the Dolistore
+SettingIsOnToolsMenu=The module does not require any special settings. <br/> Its features are accessible from the main menu &#39;Patas-M tools&#39;.BackToModuleList=Back to the modules list
+BackToModuleList=Back to the modules list
+NewVersionAviable=A new version of the module is available
+NumberVersion=Version
+MonthVersion=Month of publication
+ChangesVersion=Main changes made
+SupplierPricRSetup=Configuration of the supplier module
+SupplierPricRSettingValue=Main configuration
+
+## ABOUT GENERAL
+About=About
+Slogan=Development, support and training for Dolibarr
+LienModules=Our modules
+LienServices=Our services
+LienDoc=Our documentation
+LienDolistore=Find our other modules
+Changelog=Module change
+SupportModuleInformation=Technical informations
+SupportModuleInformationDesc=Note: this information is useful and may be asked if you meet a bug in the operation of the module.
+DolibarrVersion=Dolibarr version
+ModuleVersion=Module version
+PHPVersion=PHP version
+DatabaseVersion=Database version
+WebServerVersion=Web server version
+
+##PERMISSIONS
+Permission1601151=Update purchase prices from a supplier price request
+
+## ADMIN MODULE
+SupplierPricRSetting=Setting
+BlockOnEmptyRefFourn=Products/services without reference
+InfoBlockOnEmptyRefFourn=Do not process any line of supplier price requests if a reference is missing.
+QuantityOnlyOne=Minimum quantities at 1
+InfoQuantityOnlyOne=We record prices with a minimum quantity always at 1
+
+##
+AddSupplierPricr=Add purchase price
+SupplierPriceUpdated=%of purchase price added/update from line (s) of the document
+NoRefFournInOneLine=All lines must have a reference.
+ErrorOnSupplierPrice=Unable to add/update purchase prices

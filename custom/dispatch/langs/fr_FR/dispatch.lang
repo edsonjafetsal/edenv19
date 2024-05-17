@@ -1,0 +1,130 @@
+Module104970Name=Dispatch
+Module104970Desc=Gestion de la ventilation des équipements sur réception, expédition, ...
+
+DispatchInterfaceDesc=Trigger du module expédtion spécifique Latoxan
+
+DispatchMenuTitle=Expédition à préparer
+
+DispatchSetup=Administration du module Dispatch
+DispatchSetupTitle=Gestion des détails Réception/Expédidion, à propos
+
+UseImportFile=Utiliser l'import de fichier pour créer les détails expédition/réception
+DispatchRecepAutoQuantity=Renseigné automatiquement la quantité commandé lors de la réception d'un produit
+DispatchDLUOByDefault=Renseigner automatiquement la DLUO avec date du jour + X (X étant l'ajout de jour, mois ou année au format sql ex: +1 year)
+SUPPLIER_ORDER_RECEPTION=Réception commande fournisseur
+
+ShippingDetailsTab=Détail expédition
+ManualReceptionTab=Réception manuelle
+EquipmentDetailsTab=Détail équipement
+ReceptionTab=Réception équipements/produits
+
+SerializedProduct=Produit sérialisé
+SerializeThisProductInfo=Réceptionner des équipements de ce produit
+SerializedProductInfo=Ce produit est en réception sérialisé. Pour réceptionner ce produit de manière standard, supprimez les lignes adéquates des équipements
+SerializeThisProduct=Sérialiser cette ligne
+SerialNumberNeeded=Numéro de série requis
+AssetVentil=Ventiler les produits et créer les équipements
+ProductsSent=Produits expédiés
+ProductsReceived=Produits reçus
+
+
+ErrorSupplierTarif=Quantité tarif et Prix Total (si coché)
+ErrorSupplierTarifNoConf=Prix Total payé
+
+SupplierQtyPrice=Qté mini du tarif
+TotalPriceOrdered=Prix Total payé
+GenerateSupplierTarif=Créer le tarif
+
+DISPATCH_UPDATE_ORDER_PRICE_ON_RECEPTION=Mettre à jour les prix de la commande lors de la ventillation
+DISPATCH_CREATE_SUPPLIER_PRICE=Générer des prix fournisseurs à la réception des produits vers stocks
+DISPATCH_HIDE_DLUO_PDF=Cacher la DLUO sur les PDF d'expédition
+DISPATCH_GROUP_DETAILS_ON_PDF=Sur une expédition, Grouper les quantités par numéro de lot au lieu de voir les numéros de séries
+
+SaveBeforeVentil=Sauvegardez vos modifications avant de lancer la ventilation
+DISPATCH_CREATE_NUMSERIE_ON_RECEPTION_IF_LOT=Permettre de créer les équipements avec numéro de série automatique lors d'une réception si le lot est saisi
+createNumSerieOnTheFly=Création du numéro de série %s à la volée
+
+DISPATCH_USE_ONLY_UNIT_ASSET_RECEPTION=Ne pas autoriser la saisie de la quantité lors de la ventilation (quantité auto attribuée = 1)
+DISPATCH_SHOW_UNIT_RECEPTION=Afficher l'unité sur l'écran de récéption
+
+QtyDispatchedShort=Déjà ventilé
+QtyToDispatchShort=Qté à ventiler
+
+DISPATCH_CREATE_NUMSERIE_ON_RECEPTION_FROM_FIRST_INPUT=Permettre de créer les équipements avec numéro de série automatique lors d'une réception à partir du premier numéro de série saisi pour chaque produit
+CalculateFollowingSerialNumbers=Calculer les suivants
+
+DISPATCH_CAN_LINK_ASSET_TO_OBJECT_IN_ANY_STATUS=Permettre de lier/délier des équipements à des objets (commande, contrat, etc.) quel que soit leur statut
+
+NoAssetCreated=Aucun équipement créé en base
+AssetAlreadyLinked=Numéro de série déjà réceptionné
+
+DISPATCH_SHIPPING_VALIDATE_ALERT_IF_NO_DETAIL=Lors de la validation d'une expédition, afficher une alerte si aucun détail des équipements n'a été renseigné
+DispatchExpeditionNoDetail=Le détail des équipements n'a pas été renseigné
+
+DISPATCH_SHIPPING_LINES_CAN_BE_CHECKED_PREPARED=Les équipements présents dans le détail d'expédition peuvent être marqués "préparés"
+DISPATCH_BLOCK_SHIPPING_CLOSING_IF_PRODUCTS_NOT_PREPARED=Bloquer la clôture d'une expédition si des équipements sont marqués comme non préparés
+AssetMarkedAsPrepared=Ligne marquée 'Préparée'
+AssetMarkedAsNotPrepared=Ligne marquée 'Non préparée'
+AssetsMarkedAsPrepared=Toutes les lignes marquée 'Préparée'
+AssetsMarkedAsNotPrepared=Tout les lignes marquées 'Non préparée'
+NAssetsMarkedCouldNotBeMarked=%s ligne(s) non modifiée(s)
+NoShipmentAssetDetail=Pas d'équipements dans cette expédition
+ShipmentCannotBeClosed=L'expédition ne peut être close : %s
+ShipmentCannotBeClosedAssetsNotPrepared=Tous les équipements n'ont pas été préparés
+ShipmentCannotBeClosedSerializedLinesHaveNoDetail=Certaines lignes de produits sérializés n'ont pas d'équipement lié
+ShipmentCannotBeClosedQtyDoesntMatch=La quantité d'équipements liés est inférieure à la quantité de la ligne associée
+
+NoBDRAssetDetail=Pas d'équipements dans ce bon de retour
+DispatchBonderetour=Réception du bon de retour %s
+ReceivingForSameBDR=Réceptions pour ce bon de retour
+StockMovementAssetStockTransfered=Retour de l'équipement  %s sur bon de retour %s
+BDRCalculateAuto=La ventilation est faite automatiquement à la %s du bon de retour
+BDRValidate=validation
+BDRClose=cloture
+
+DISPATCH_RESET_ASSET_WAREHOUSE_ON_SHIPMENT=Retirer l'entrepot de l'équipement à la validation de l'expédition
+DISPATCH_SKIP_SERVICES=Ignorer les lignes de type service
+DISPATCH_STOCK_MOVEMENT_BY_ASSET=Lorsqu'il y a plusieurs équipements pour le même produit lors d'une réception, faire en sorte qu'il y ait un mouvement de stock par équipement, plutôt qu'un mouvement de stock global contenant tous les équipements
+DISPATCH_ALLOW_DISPATCHING_EXISTING_ASSET=Permettre de réceptionner plusieurs fois un équipement existant
+
+AllSerialNumbersAdded=Les numéros de série ont été enregistré automatiquement
+NoMoreAssetAvailable=Aucun équipement disponible pour ce numéro de lot
+
+# Expedition Card
+colDispatch=N° de série / lot
+
+LIST_SHIPMENTS_TO_PREPARE=Liste des expéditions à préparer
+LIST_NO_SHIPMENTS=Il n'y a aucunes expédition à afficher
+COUNT_REL_EQUIPMENT=%s équipement(s) lié(s)
+AFFECTED_ROW=Ligne concernée
+DispatchSelectProduct=Sélectionnez un produit
+DispatchItemCountDispatch=%s équipement(s) dans votre expédition
+DispatchItemCountReception=%s équipement(s) dans votre réception
+DispatchSerialNumber=Numéro de série
+DispatchBatchNumber=Numéro de Lot
+DispatchDateReception=Date de réception
+DispatchMsgAssetGen=Equipements créés / produits ventilés
+ProductHasToBeSerialize=Le produit %s doit être sérialisé
+
+#
+# T2476
+#
+ShipmentsList = Liste des expéditions non traitées
+SelectShipment = Expédition(s) à ventiler
+supplierOrderLinkedShipment = Expédition liée à la commande fournisseur
+SelectExpe = Traiter cette expédition
+NbItemCountInReception = Détail de l'expédition
+Warehouse = Entrepôt
+Product = Produit
+DeletedLine = Ligne supprimée
+NoSerialNumber = Pas de numéro de série : impossible de créer l'équipement pour %s . Si vous ne voulez pas sérialiser ce produit, supprimez les lignes de numéro de série et faites une réception simple
+DLUO = DLUO
+IMEI = IMEI
+Firmware = Firmware
+TreatedExpe = Expédition traitée
+ShipmentsTreatedList = Liste des expéditions traitées
+VentilatedExpeditions = Expédition(s) ventilées
+ResultSetEquipmentError = Une erreur est survenue dans la requête des équipements
+ErrorAtResultSet = Une erreur est survenue dans la requête de %s
+ErrorUnableToFetchLine=Impossible de récupérer la ligne %d
+ErrorAtSaveObjectRecepDetail = Une erreur est survenue lors de l'enregistrement en base de données

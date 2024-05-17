@@ -1,0 +1,56 @@
+# Dolibarr language file - it_IT - supplierpricr
+CHARSET=UTF-8
+
+# NOM DU MODULE
+supplierpricr=Supplerdr
+SupplierPricRPresentation=Aggiunta di prezzi per l'acquisto di prodotti/servizi dalle richieste dei prezzi dei fornitori
+
+# ADMIN GENERAL
+NothingToSetup=Attiva il modulo per accedere alla pagina di configurazione
+GeneralSetup=impostazioni generali
+GeneralSetting=impostazioni generali
+PatasTools=Strumenti Patas-M
+PatasMonkeyTools=Spazio utensile Patas-Monkey
+PatasToolsNews=Trova qui le informazioni da patas-monkey.com (richiede una connessione Internet)
+PatasMonkeyPresent=Questo modulo è una creazione di Patas-Monkey, una documentazione è disponibile sul nostro sito
+MoreModulesLink=Puoi trovare tutti i nostri sviluppi su Dolistore
+SettingIsOnToolsMenu=Il modulo non richiede alcuna configurazione particolare.<br/> Le sue funzionalità sono accessibili dagli strumenti principali "Patas-M".
+BackToModuleList=Torna all'elenco dei moduli
+NewVersionAviable=È disponibile una nuova versione del modulo
+NumberVersion=Versione
+MonthVersion=Mese di pubblicazione
+ChangesVersion=Modifiche principali apportate
+SupplierPricRSetup=Configurazione del modulo del fornitore
+SupplierPricRSettingValue=Configurazione principale
+
+## ABOUT GENERAL
+About=Di
+Slogan=Sviluppo, supporto e formazione per Dolibarr
+LienModules=I nostri moduli
+LienServices=I nostri servizi
+LienDoc=La nostra documentazione
+LienDolistore=Trova i nostri altri moduli
+Changelog=Modifica del modulo
+SupportModuleInformation=Informazioni tecniche
+SupportModuleInformationDesc=Nota: queste informazioni sono utili e possono essere chiesto se si incontra un bug nel funzionamento del modulo.
+DolibarrVersion=Versione Dolibarr
+ModuleVersion=Versione del modulo
+PHPVersion=Versione PHP
+DatabaseVersion=Versione del database
+WebServerVersion=Versione server web
+
+##PERMISSIONS
+Permission1601151=Aggiorna i prezzi di acquisto da una richiesta di prezzo del fornitore
+
+## ADMIN MODULE
+SupplierPricRSetting=Collocamento
+BlockOnEmptyRefFourn=Prodotti/servizi senza riferimento
+InfoBlockOnEmptyRefFourn=Non elaborare alcuna linea di richieste di prezzo del fornitore se manca un riferimento.
+QuantityOnlyOne=Quantità minime a 1
+InfoQuantityOnlyOne=Registriamo i prezzi con una quantità minima sempre a 1
+
+##
+AddSupplierPricr=Aggiungi il prezzo di acquisto
+SupplierPriceUpdated=%del prezzo di acquisto aggiunto/aggiornamento dalle righe del documento
+NoRefFournInOneLine=Tutte le righe devono avere un riferimento.
+ErrorOnSupplierPrice=Impossibile aggiungere/aggiornare i prezzi di acquisto

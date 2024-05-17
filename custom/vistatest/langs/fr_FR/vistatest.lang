@@ -1,0 +1,48 @@
+# Copyright (C) 2024 SuperAdmin <support@unboxcrm.com>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+#
+# Générique
+#
+
+# Module label 'ModuleVistaTestName'
+ModuleVistaTestName = VistaTest
+# Module description 'ModuleVistaTestDesc'
+ModuleVistaTestDesc = Description de VistaTest
+
+#
+# Page d'administration
+#
+VistaTestSetup = Configuration du module VistaTest
+Settings = Réglages
+VistaTestSetupPage = Page de configuration du module VistaTest
+
+#
+# Page À propos
+#
+About = À propos
+VistaTestAbout = À propos de VistaTest
+VistaTestAboutPage = Page à propos de VistaTest
+
+#
+# Page d'exemple
+#
+MyPageName = Nom de ma page
+
+#
+# Box d'exemple
+#
+MyWidget = Mon widget
+MyWidgetDescription = Description de mon widget

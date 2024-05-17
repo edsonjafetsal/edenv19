@@ -1,0 +1,10 @@
+# CHANGELOG UPDATEFIELDS FOR [DOLIBARR ERP CRM](https://www.dolibarr.org)
+
+## 1.0
+
+Initial version
+
+##1.1
+
+PDFS PERSONALIZADOS   EN ATTACHED FILES
+TIENE SETUP PARA ACTIVARLO EN uploadfiles

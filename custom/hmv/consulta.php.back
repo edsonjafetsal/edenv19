@@ -1,0 +1,223 @@
+<?php
+/////// CONEXIÓN A LA BASE DE DATOS /////////
+$host = 'localhost';
+$basededatos = 'dolibarr_nj';
+$usuario = 'root';
+$contraseña = 'root';
+
+$conexion = new mysqli($host, $usuario, $contraseña, $basededatos);
+if ($conexion -> connect_errno)
+{
+	die("Fallo la conexion:(".$conexion -> mysqli_connect_errno().")".$conexion-> mysqli_connect_error());
+}
+
+//////////////// VALORES INICIALES ///////////////////////
+
+$tabla="";
+
+
+$query="SELECT co.ref AS co,cat.label AS categorie, CONCAT(u.firstname,' ',u.lastname) AS salesrep, (cod.buy_price_ht*cod.qty) AS extension, cod.total_ht AS total_line,  p.ref AS product, ex.ref AS shipment, eba.batch AS lot_shipment, CASE(p.tobatch) WHEN '0' THEN 'NO' WHEN '1' THEN 'YES' END AS is_lot, soc.nom AS third,  p.description AS prod_desc,
+cod.subprice AS sell_pri, cod.buy_price_ht AS buy_pri,
+co.date_commande AS co_date, cod.qty As qty,
+CONCAT(ROUND(100-(((cod.buy_price_ht*cod.qty)* 100)/cod.total_ht) , 0), '%') AS margin2, co.rowid AS id, coex.proc
+FROM  llx_commande AS co
+LEFT JOIN llx_commandedet AS cod ON co.rowid = cod.fk_commande
+LEFT JOIN llx_commande_extrafields AS coex ON co.rowid = coex.fk_object
+LEFT JOIN llx_expeditiondet AS exde ON  cod.rowid = exde.fk_origin_line
+LEFT JOIN llx_expedition AS ex ON  exde.fk_expedition = ex.rowid
+LEFT JOIN llx_expeditiondet_batch AS eba ON exde.rowid = eba.fk_expeditiondet
+LEFT JOIN llx_product AS p ON  cod.fk_product = p.rowid
+LEFT JOIN llx_societe AS soc ON co.fk_soc = soc.rowid
+  LEFT JOIN llx_element_contact as ec ON ec.element_id = co.rowid and ec.fk_c_type_contact in (91)
+LEFT JOIN llx_c_type_contact AS ct ON ec.fk_c_type_contact = ct.rowid AND ct.element LIKE 'commande'
+                left join llx_user as u ON u.rowid = ec.fk_socpeople
+  LEFT JOIN llx_categorie_product cats ON cats.fk_product = p.rowid
+                    LEFT JOIN llx_categorie cat ON cat.rowid = cats.fk_categorie
+WHERE 1 = 1  AND p.ref IS NOT NULL
+GROUP BY  cod.rowid";
+/*
+ * CABECERAS
+ * */
+$query1="SELECT co.ref AS co,cat.label AS categorie, CONCAT(u.firstname,' ',u.lastname) AS salesrep, (cod.buy_price_ht*cod.qty) AS extension, cod.total_ht AS total_line,  p.ref AS product, ex.ref AS shipment, eba.batch AS lot_shipment, CASE(p.tobatch) WHEN '0' THEN 'NO' WHEN '1' THEN 'YES' END AS is_lot, soc.nom AS third,  p.description AS prod_desc,
+cod.subprice AS sell_pri, cod.buy_price_ht AS buy_pri,
+co.date_commande AS co_date, cod.qty As qty,
+CONCAT(ROUND(100-(((cod.buy_price_ht*cod.qty)* 100)/cod.total_ht) , 0), '%') AS margin2, co.rowid AS id, coex.proc
+FROM  llx_commande AS co
+LEFT JOIN llx_commandedet AS cod ON co.rowid = cod.fk_commande
+LEFT JOIN llx_commande_extrafields AS coex ON co.rowid = coex.fk_object
+LEFT JOIN llx_expeditiondet AS exde ON  cod.rowid = exde.fk_origin_line
+LEFT JOIN llx_expedition AS ex ON  exde.fk_expedition = ex.rowid
+LEFT JOIN llx_expeditiondet_batch AS eba ON exde.rowid = eba.fk_expeditiondet
+LEFT JOIN llx_product AS p ON  cod.fk_product = p.rowid
+LEFT JOIN llx_societe AS soc ON co.fk_soc = soc.rowid
+  LEFT JOIN llx_element_contact as ec ON ec.element_id = co.rowid and ec.fk_c_type_contact in (91)
+LEFT JOIN llx_c_type_contact AS ct ON ec.fk_c_type_contact = ct.rowid AND ct.element LIKE 'commande'
+                left join llx_user as u ON u.rowid = ec.fk_socpeople
+  LEFT JOIN llx_categorie_product cats ON cats.fk_product = p.rowid
+                    LEFT JOIN llx_categorie cat ON cat.rowid = cats.fk_categorie
+WHERE 1 = 1  AND p.ref IS NOT NULL
+GROUP BY  co.ref";
+
+/*
+ *  FIN CABECERAS
+ * */
+if(isset($_POST['cat'])) {
+	$cat = $conexion->real_escape_string($_POST['cat']);
+}
+
+///////// LO QUE OCURRE AL TECLEAR SOBRE EL INPUT DE BUSQUEDA ////////////
+if(isset($_POST['alan']))
+{
+	$q=$conexion->real_escape_string($_POST['alan']);
+	$query="SELECT co.ref AS co,cat.label AS categorie, CONCAT(u.firstname,' ',u.lastname) AS salesrep, (cod.buy_price_ht*cod.qty) AS extension, cod.total_ht AS total_line,  p.ref AS product, ex.ref AS shipment, eba.batch AS lot_shipment, CASE(p.tobatch) WHEN '0' THEN 'NO' WHEN '1' THEN 'YES' END AS is_lot, soc.nom AS third,  p.description AS prod_desc,
+	cod.subprice AS sell_pri, cod.buy_price_ht AS buy_pri,
+	co.date_commande AS co_date, cod.qty As qty,
+	CONCAT(ROUND(100-(((cod.buy_price_ht*cod.qty)* 100)/cod.total_ht) , 0), '%') AS margin2, co.rowid AS id, coex.proc
+	FROM  llx_commande AS co
+	LEFT JOIN llx_commandedet AS cod ON co.rowid = cod.fk_commande
+	LEFT JOIN llx_commande_extrafields AS coex ON co.rowid = coex.fk_object
+	LEFT JOIN llx_expeditiondet AS exde ON  cod.rowid = exde.fk_origin_line
+	LEFT JOIN llx_expedition AS ex ON  exde.fk_expedition = ex.rowid
+	LEFT JOIN llx_expeditiondet_batch AS eba ON exde.rowid = eba.fk_expeditiondet
+	LEFT JOIN llx_product AS p ON  cod.fk_product = p.rowid
+	LEFT JOIN llx_societe AS soc ON co.fk_soc = soc.rowid
+	  LEFT JOIN llx_element_contact as ec ON ec.element_id = co.rowid and ec.fk_c_type_contact in (91)
+	LEFT JOIN llx_c_type_contact AS ct ON ec.fk_c_type_contact = ct.rowid AND ct.element LIKE 'commande'
+					left join llx_user as u ON u.rowid = ec.fk_socpeople
+	  LEFT JOIN llx_categorie_product cats ON cats.fk_product = p.rowid
+						LEFT JOIN llx_categorie cat ON cat.rowid = cats.fk_categorie
+	WHERE 1 = 1  AND p.ref IS NOT NULL AND co.ref LIKE '%".$q."%'
+	GROUP BY  cod.rowid";
+
+	$query1="SELECT co.ref AS co,cat.label AS categorie, CONCAT(u.firstname,' ',u.lastname) AS salesrep, (cod.buy_price_ht*cod.qty) AS extension, cod.total_ht AS total_line,  p.ref AS product, ex.ref AS shipment, eba.batch AS lot_shipment, CASE(p.tobatch) WHEN '0' THEN 'NO' WHEN '1' THEN 'YES' END AS is_lot, soc.nom AS third,  p.description AS prod_desc,
+	cod.subprice AS sell_pri, cod.buy_price_ht AS buy_pri,
+	co.date_commande AS co_date, cod.qty As qty,
+	CONCAT(ROUND(100-(((cod.buy_price_ht*cod.qty)* 100)/cod.total_ht) , 0), '%') AS margin2, co.rowid AS id, coex.proc
+	FROM  llx_commande AS co
+	LEFT JOIN llx_commandedet AS cod ON co.rowid = cod.fk_commande
+	LEFT JOIN llx_commande_extrafields AS coex ON co.rowid = coex.fk_object
+	LEFT JOIN llx_expeditiondet AS exde ON  cod.rowid = exde.fk_origin_line
+	LEFT JOIN llx_expedition AS ex ON  exde.fk_expedition = ex.rowid
+	LEFT JOIN llx_expeditiondet_batch AS eba ON exde.rowid = eba.fk_expeditiondet
+	LEFT JOIN llx_product AS p ON  cod.fk_product = p.rowid
+	LEFT JOIN llx_societe AS soc ON co.fk_soc = soc.rowid
+	  LEFT JOIN llx_element_contact as ec ON ec.element_id = co.rowid and ec.fk_c_type_contact in (91)
+	LEFT JOIN llx_c_type_contact AS ct ON ec.fk_c_type_contact = ct.rowid AND ct.element LIKE 'commande'
+					left join llx_user as u ON u.rowid = ec.fk_socpeople
+	  LEFT JOIN llx_categorie_product cats ON cats.fk_product = p.rowid
+						LEFT JOIN llx_categorie cat ON cat.rowid = cats.fk_categorie
+	WHERE 1 = 1  AND p.ref IS NOT NULL AND co.ref LIKE '%".$q."%'
+	GROUP BY  co.ref";
+
+}
+
+
+//$buscarAlumnos=$conexion->query($query);
+$cabecerasCO=$conexion->query($query1);
+$num = $cabecerasCO->num_rows;
+if ($num > 0)
+{
+	while($CABECERACO= $cabecerasCO->fetch_assoc())
+	{
+		$tabla.=
+
+			'	<br><h7> REF:'.$CABECERACO['co'].'</h7><br>
+				<h7>DATE: '.$CABECERACO['co_date'].'</h7><br>
+				<h7><a href = "">Process</h7></a><br>
+				<table class="table">
+				<tr>
+				</tr>';			//CABECERA COMMANDE  Y FECHA
+
+		/*
+		 * INICIO  FILTRADO X   CO
+		 * */
+		$COMMANDE= $CABECERACO['co'];
+		$query2="SELECT co.rowid as id, co.ref AS co,cat.label AS categorie, CONCAT(u.firstname,' ',u.lastname) AS salesrep, (cod.buy_price_ht*cod.qty) AS extension, cod.total_ht AS total_line,  p.ref AS product, ex.ref AS shipment, eba.batch AS lot_shipment, CASE(p.tobatch) WHEN '0' THEN 'NO' WHEN '1' THEN 'YES' END AS is_lot, soc.nom AS third,  p.description AS prod_desc,
+		cod.subprice AS sell_pri, cod.buy_price_ht AS buy_pri,
+		co.date_commande AS co_date, cod.qty As qty,
+		CONCAT(ROUND(100-(((cod.buy_price_ht*cod.qty)* 100)/cod.total_ht) , 0), '%') AS margin2, co.rowid AS id, coex.proc
+		FROM  llx_commande AS co
+		LEFT JOIN llx_commandedet AS cod ON co.rowid = cod.fk_commande
+		LEFT JOIN llx_commande_extrafields AS coex ON co.rowid = coex.fk_object
+		LEFT JOIN llx_expeditiondet AS exde ON  cod.rowid = exde.fk_origin_line
+		LEFT JOIN llx_expedition AS ex ON  exde.fk_expedition = ex.rowid
+		LEFT JOIN llx_expeditiondet_batch AS eba ON exde.rowid = eba.fk_expeditiondet
+		LEFT JOIN llx_product AS p ON  cod.fk_product = p.rowid
+		LEFT JOIN llx_societe AS soc ON co.fk_soc = soc.rowid
+		  LEFT JOIN llx_element_contact as ec ON ec.element_id = co.rowid and ec.fk_c_type_contact in (91)
+		LEFT JOIN llx_c_type_contact AS ct ON ec.fk_c_type_contact = ct.rowid AND ct.element LIKE 'commande'
+						left join llx_user as u ON u.rowid = ec.fk_socpeople
+		  LEFT JOIN llx_categorie_product cats ON cats.fk_product = p.rowid
+							LEFT JOIN llx_categorie cat ON cat.rowid = cats.fk_categorie
+		WHERE 1 = 1  AND p.ref IS NOT NULL AND co.ref ='".$COMMANDE." '
+		GROUP BY  cod.rowid";
+
+		$buscarAlumnos2=$conexion->query($query2);
+
+		$tabla.=
+			'<table class="table">
+				<tr class="bg-primary">
+					<td>CO</td>
+					<td>Date</td>
+					<td>Categorie</td>
+					<td>Sales Representative</td>
+					<td>Shipment</td>
+					<td>Lot #</td>
+					<td>Product</td>
+					<td>Selling Price</td>
+					<td>Buying Price</td>
+					<td>Quantity</td>
+					<td>is lot?</td>
+					<td>Product Description</td>
+					<td>Customer</td>
+					<td>Margin</td>
+					<td>check</td>
+				</tr>';
+
+		while($filaAlumnos2= $buscarAlumnos2->fetch_assoc())
+		{
+			$tabla.=
+				'<tr>
+					/*<td>'.$filaAlumnos2['co'].'</td>
+					<td>'.$filaAlumnos2['co_date'].'</td>*/
+					<td>'.$filaAlumnos2['categorie'].'</td>
+					<td>'.$filaAlumnos2['salesrep'].'</td>
+					<td>'.$filaAlumnos2['shipment'].'</td>
+					<td>'.$filaAlumnos2['lot_shipment'].'</td>
+					<td>'.$filaAlumnos2['product'].'</td>
+					<td>'.$filaAlumnos2['sell_pri'].'</td>
+					<td>'.$filaAlumnos2['buy_pri'].'</td>
+					<td>'.$filaAlumnos2['qty'].'</td>
+					<td>'.$filaAlumnos2['is_lot'].'</td>
+					<td>'.$filaAlumnos2['prod_desc'].'</td>
+					<td>'.$filaAlumnos2['margin2'].'</td>
+				   <td><input type="checkbox" value="'.$filaAlumnos2['id'].'" id="cbox20" name="cbox" class="valores"><td>
+				 </tr>
+		
+				 <ul id="lista" class="list_group"></ul>
+				';
+		}
+
+
+
+		/*
+		 * FIN FILTRADO X   CO
+		 * */
+
+
+
+		$tabla.=      //CIERRE FINAL DE TABLA
+			'<tr>	
+			</table>';
+	}
+
+
+
+} else
+	{
+		$tabla="No coincidences Found.";
+	}
+
+
+echo $tabla;
+?>

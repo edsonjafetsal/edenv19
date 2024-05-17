@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<style type="text/css">
+			
+			.pagebreak {page-break-inside:avoid !important;}
+			
+		</style>
+	</head>
+	
+	
+	<body>
+		<div id="body">
+			<div id="[TInfoEtiquette.float]" class="pagebreak" >
+				<p style="font-size:12px;line-height: 1"><b><span style="font-size: 15px">[langs.transnoentitiesnoconv(NumCMD)] : [TInfoEtiquette.refCliCmd;block=div;strconv=no]</span></b></p>
+				<p style="font-size:12px;line-height: 1"><b>[langs.transnoentitiesnoconv(Ref)] : [TInfoEtiquette.refProd;block=div;strconv=no]</b></p>
+				<p style="font-size:12px;line-height: 1"><b>[langs.transnoentitiesnoconv(Desc)] : [TInfoEtiquette.label;block=div;strconv=no]</b></p>
+				<p style="font-size:12px;line-height: 1"><b>[langs.transnoentitiesnoconv(Quantity)] : [TInfoEtiquette.qty_to_make;block=div;strconv=no]</b></p>
+				[onshow; block=begin; when [display_note]=='1']
+				<p style="font-size:12px;line-height: 1"><b>[TInfoEtiquette.note_private; strconv=no]</b></p>
+				[onshow; block=end]
+			</div>
+		</div>
+		<style type="text/css">
+			#body{
+				position:relative;
+				top: [margin_top]px;
+
+			}
+			
+			#pair{
+				position:relative;
+				right:[margin_right_pair]px;
+				float:left;
+				height:[height]mm;
+				width:[width]%;
+				top:[margin_top_cell]px;
+				
+			}
+			#impair{
+				position:relative;
+				left: [margin_left_impair]px;
+				float:left;
+				height:[height]mm;
+				width:[width]%;
+				top:[margin_top_cell]px;
+			}
+			
+		</style>
+		
+	</body>
+</html>
+

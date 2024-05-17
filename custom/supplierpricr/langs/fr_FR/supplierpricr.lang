@@ -1,0 +1,56 @@
+# Dolibarr language file - fr_FR - SupplierPricR
+CHARSET=UTF-8
+
+# NOM DU MODULE
+supplierpricr=SupplierPricR
+SupplierPricRPresentation=Ajout des prix d'achat des produits/services depuis les demandes de prix fournisseurs
+
+# ADMIN GENERAL
+NothingToSetup=Activez le module pour accéder à la page de configuration
+GeneralSetup=Paramètres généraux
+GeneralSetting=Paramètres généraux
+PatasTools=Outils Patas-M
+PatasMonkeyTools=Espace des outils Patas-monkey
+PatasToolsNews=Retrouvez ici les informations de patas-monkey.com (nécessite une connexion à internet)
+PatasMonkeyPresent=Ce module est une création des patas-monkey, une documentation de celui-ci est disponible sur notre site
+MoreModulesLink=Vous pouvez trouver tous nos développements sur le dolistore
+SettingIsOnToolsMenu=Le module ne nécessite pas de paramétrage particulier. <br/>Ses fonctionnalités sont accessibles depuis le menu principal 'Outils Patas-M'.
+BackToModuleList=Retour à la liste des modules
+NewVersionAviable=Une nouvelle version du module est disponible
+NumberVersion=Version
+MonthVersion=Mois de publication
+ChangesVersion=Principales modifications apportées
+SupplierPricRSetup=Configuration du module SupplierPricR
+SupplierPricRSettingValue=Paramétrage principal
+
+## ABOUT GENERAL
+About=À propos
+Slogan=Développement, support et formation pour Dolibarr
+LienModules=Nos modules
+LienServices=Nos services
+LienDoc=Nos documentations
+LienDolistore=Retrouvez nos autres modules
+Changelog=ChangeLog du module
+SupportModuleInformation=Informations techniques
+SupportModuleInformationDesc=Note : Ces informations sont utiles et pourront vous être demandées si vous rencontrez un bug dans le fonctionnement du module.
+DolibarrVersion=Version de Dolibarr
+ModuleVersion=Version du module
+PHPVersion=Version de PHP
+DatabaseVersion=Version de la base de données
+WebServerVersion=Version du serveur web
+
+##PERMISSIONS
+Permission1601151=Mettre à jour les prix d'achat depuis une demande de prix fournisseur
+
+## ADMIN MODULE
+SupplierPricRSetting=Paramètre
+BlockOnEmptyRefFourn=Produits/services sans référence
+InfoBlockOnEmptyRefFourn=Ne traiter aucune ligne des demandes de prix fournisseur si une référence est manquante.
+QuantityOnlyOne=Quantités minimums à 1
+InfoQuantityOnlyOne=On enregistre les prix avec une quantités minimums toujours à 1
+
+##
+AddSupplierPricr=Ajouter prix d'achat
+SupplierPriceUpdated=%d Prix d'achat ajouté(s)/mis à jour issu(s) des %d ligne(s) du document
+NoRefFournInOneLine=Toutes les lignes doivent avoir une référence.
+ErrorOnSupplierPrice=Impossible d'ajouter/mettre à jour les prix d'achat

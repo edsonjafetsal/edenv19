@@ -1,0 +1,2 @@
+2024-05-17 19:33:48 WARNING ::1             main.inc: database version 13.0.2 is lower than programs version 16.0.4. Redirect to install/upgrade page.
+2024-05-17 19:33:48 DEBUG   ::1             --- End access to /master.unboxerpcrm.com/index.php

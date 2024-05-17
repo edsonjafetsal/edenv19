@@ -1,0 +1,38 @@
+<changelog>
+	<Version Number="6.0.+1.0.0" MonthVersion="2017-07">
+		<change type='inf'>First Release</change> 
+	</Version> 
+	<Version Number="9.0.+1.1.0" MonthVersion="2018-12">
+		<change type='inf'>V9 compatibility</change> 
+	</Version> 
+	<Version Number="12.0.+2.0.0" MonthVersion="2020-07">
+		<change type='inf'>V11 and 12 compatibility</change> 
+	</Version> 
+	<Version Number="13.0.+2.1.0" MonthVersion="2021-05">
+		<change type='inf'>V13 compatibility</change> 
+	</Version> 
+	<Version Number="14.0.+2.2.0" MonthVersion="2021-07">
+		<change type='inf'>V14 compatibility</change> 
+		<change type='add'>create supplier price from supplier order and invoice</change> 
+	</Version> 
+	<Version Number="15.0.+2.3.0" MonthVersion="2022-02">
+		<change type='inf'>V15 compatibility</change> 
+	</Version> 
+	<Version Number="16.0.+2.4.0" MonthVersion="2022-09">
+		<change type='inf'>V16 and php V8 compatibility</change> 
+	</Version> 
+	<Version Number="16.0.+2.4.1" MonthVersion="2022-10">
+		<change type='add'>force quantity only a 1</change> 
+	</Version> 
+	<Version Number="16.0.+2.4.2" MonthVersion="2022-11">
+		<change type='fix'>force quantity only a 1, divide the total price now</change> 
+	</Version> 
+	<Version Number="17.0.+2.5.0" MonthVersion="2023-03">
+		<change type='inf'>V17 compatibility</change> 
+	</Version> 
+	<Version Number="18.0.+2.6.0" MonthVersion="2023-06">
+		<change type='inf'>V18 compatibility</change> 
+	</Version> 
+	<!-- Remplir le undocumented.xml ? -->
+	<Dolibarr minVersion="12.0.0" maxPhpVersion="8"/>
+</changelog>

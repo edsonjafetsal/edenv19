@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<title>Impression etiquette</title>
+		<style type="text/css" media="print">
+			@page{
+				padding : 0 0 0 0;
+				margin-top : [marge.margetop]mm;
+				margin-bottom : 1mm;
+				margin-left : [marge.margeleft]mm;
+				margin-right : 27mm;
+			}		
+		
+			body{
+				padding : 0 0 0 0;
+				border : 0;
+				margin : 0 0 0 0;
+				/*width: 148mm;
+				height: 297mm;*/
+			}
+			
+			.etiquette{
+				margin-bottom : 13mm;
+				margin-right : 4mm;
+				height : 13mm;
+				background-color: #d9d9d9;
+				font-size : 9px;
+				font-family : Arial;
+				width : 70mm;
+				padding-top: 1mm;
+				page-break-inside: avoid;
+			}
+			
+			div{
+				float:left;
+				padding : 0;
+			}
+			
+			.etiquette > div{
+				line-height: 16px;
+			}
+			
+			.intitule{
+				width: 55mm;
+				font-weight: bold;
+				font-style: italic;
+			}
+			
+			.detail{
+				width: 45mm;
+				min-height: 1mm;
+			}
+			
+			.tare{
+				width: 17mm;
+				height:16px;
+				text-align : right;
+				overflow: visible;
+			}
+			
+			.code{
+				width: 13mm;
+				font-weight: bold;
+				font-style: italic;
+			}
+			
+			.lot{
+				width: 17mm;
+				font-weight: bold;
+				font-style: italic;
+			}
+			.poids{
+				width: 14mm;
+				text-align: right;
+				font-weight: bold;
+				font-style: italic;
+			}
+		</style>
+		
+		<style type="text/css" media="screen">
+			@page{
+				padding : 0 0 0 0;
+				margin : 0 0 0 0;
+			}		
+		
+			body{
+				margin-top : [marge.margetop]mm;
+				margin-bottom : 18mm;
+				margin-left : [marge.margeleft]mm;
+				margin-right : 28mm;
+				padding : 0;
+				border : 0;
+				/*width: 148mm;
+				height: 297mm;*/
+			}
+			
+			.etiquette{
+				margin-bottom : 13mm;
+				margin-right : 4mm;
+				height : 13mm;
+				background-color: #d9d9d9;
+				font-size : 9px;
+				font-family : Arial;
+				width : 70mm;
+				padding-top: 1mm;
+				page-break-inside: avoid ;
+			}
+			
+			div{
+				float:left;
+				padding : 0;
+			}
+			
+			.etiquette > div{
+				line-height: 16px;
+			}
+			
+			.intitule{
+				width: 55mm;
+				font-weight: bold;
+				font-style: italic;
+			}
+			
+			.detail{
+				width: 45mm;
+				min-height: 1mm;
+			}
+			
+			.tare{
+				width: 17mm;
+				height:16px;
+				text-align : right;
+				overflow: visible;
+			}
+			
+			.code{
+				width: 13mm;
+				font-weight: bold;
+				font-style: italic;
+			}
+			
+			.lot{
+				width: 17mm;
+				font-weight: bold;
+				font-style: italic;
+			}
+			.poids{
+				width: 14mm;
+				text-align: right;
+				font-weight: bold;
+				font-style: italic;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div class="etiquette">
+			<!-- [etiquette_vide.#;block=div] -->
+		</div>
+
+		<div class="etiquette">
+			<div class="intitule">[etiquette.nom;block=((div))]</div>
+			<div class="detail">[etiquette.description;]</div>
+			<div class="label">Tare :</div><div class="tare">[etiquette.tare]&nbsp;[etiquette.tare_unit]</div>
+			<div class="label">Code:&nbsp;</div><div class="code">[etiquette.ref]</div>
+			<div class="label">Lot:&nbsp;</div><div class="lot">[etiquette.lot]</div>
+			<div class="label">Poids Net :</div><div class="poids">[etiquette.poids]&nbsp;[etiquette.poids_unit]</div>
+		</div>
+	</body>
+</html>

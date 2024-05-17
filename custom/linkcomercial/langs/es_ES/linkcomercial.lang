@@ -1,0 +1,50 @@
+# Copyright (C) 2019 SuperAdmin
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+#
+# Generic
+#
+
+# Module label 'ModulelinkcomercialName'
+ModulelinkcomercialName = Linkcomercial
+linkcomercialName=Link Comercial
+# Module description 'ModulelinkcomercialDesc'
+ModulelinkcomercialDesc =Link Objetos Comerciales Pedidos y Presupuestos
+
+#
+# Admin page
+#
+linkcomercialSetup = linkcomercial setup
+Settings = Settings
+linkcomercialSetupPage = linkcomercial setup page
+linkcomercialDescription=Link Objetos Comerciales Pedidos y Presupuestos
+#
+# About page
+#
+About = Acerca de
+linkcomercialAbout = Acerca de Link Comercial
+linkcomercialAboutPage = Acerca de Link Comercial
+
+#
+# Sample page
+#
+MyPageName = My page name
+toPresupuestoCliente=Presupuesto Cliente
+toPedidoProveedor= Pedido Proveedor
+#
+# Sample box
+#
+MyWidget = My widget
+MyWidgetDescription = My widget description

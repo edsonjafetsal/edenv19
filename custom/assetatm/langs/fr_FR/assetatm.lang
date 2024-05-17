@@ -1,0 +1,221 @@
+# Dolibarr language file - fr_FR
+CHARSET=UTF-8
+
+Module104162Name=Asset
+Module104162Desc=Asset management (CAM)
+CreateAssetLot=Create an asset lot
+CreateAsset=Create an asset
+AssetSetup=Asset module setup
+LotDisabled=The option to use lots in Production orders is disabled
+ficheOF=Card
+OFActions=Actions
+ParametersWorkstation=Workstation Settings
+ParametersWorkflow=Workflow Settings
+
+# EQUIPEMENT
+GPAO=CAM
+Asset=Asset
+ListAsset=List of assets
+ListAssetLent=List of assets loaned
+AssetDeleted=Asset removed
+AssetType=Type of Assets
+AssetListType=List of asset types
+AssetTypeMsgNothing=There are no types of assets to display
+AssetListFields=Asset Fields
+AssetAddType=Add asset type
+AssetCreateType=Create asset type
+AssetToComplete=To complete
+AssetLotsList=List of Lots
+AssetLoaned=Loaned
+AssetDescDLUO=BEST BEFORE DATE
+ImpossibleToCreateAsset=Unable to create asset
+AssetDefaultDLUO=Delay in days of optimal use date
+Asset_show_DLUO=Show Optimal Date Limit of Use
+NoAsset=There are no Assets
+Asset_DefaultCompose_fourni="Compound provided" default value (Supplier price)
+Asset_serialNumberAlreadyInUse=This serial number is already in use
+AssetAtmSerialNumber=Serial Number
+AssetAtmBatchNumber=Batch Number
+AssetAtmCurrentConsistency=Current Consistency
+AssetAtmLocalisation=Location
+SerialNumberShort=Serial N°
+
+# ORDRE DE FABRICATION
+OFAsset=Production order
+OFAssetCreated=Production order(s) created
+CreateOFAsset=Create a Production order
+ListOFAsset=List of production orders
+OFAssetDeleted=Production order deleted
+createOFFile=Generate paper document
+WorkStation=Workstation
+workstation=workplace
+ListOrderProducts=List of products of the order
+AssetProductionOrder=Production order
+AssetProductionOrderDraft=Draft
+AssetProductionOrderVALID=Valid
+AssetProductionOrderNEEDOFFER=Waiting for price
+AssetProductionOrderONORDER=Waiting for supply
+AssetProductionOrderOPEN=In progress
+AssetProductionOrderCLOSE=Completed
+AssetNewProductionOrder=New Production order
+OFAttachedClosedAutomatically=Production order %s automatically closed
+AssetAddNeededQtyZero=Add components with an amount to 0
+AssetNegativeDestock=Allow destocking of assets in Production orders even if quantity is insufficient
+AssetChildOfStatusFollowParentStatus=When changing the status of the parent Production order, populate the latter on the status of children's Production orders if not superior
+AssetConcatPDF=Concatenate the PDF documents of manufacture Production orders children with that of parent Production order
+NotConcatQtyForNeeded=Dissociate quantities of products, necessary for manufacture, for the same reference
+AssetUseDestockagePartiel=Use destocking / partial storage. <br />- The products to be manufactured will be added in stock when the "Quantity used" is updated on a Production order in the state "Production in progress".
+ofLabelQtyTheoriqueMoinsOf=Theoretical stock - Production order quantity
+ofResultQty=%s (Qty to be produced: %s / Qty used: %s)
+OfShowQtytheorique=Show theoretical stock - Production order stock on the stock tab of a product
+ofPrintTicket=Label printing
+ofListProductNeeded=<strong>List of Production orders needing this product</strong>
+set_ABRICOT_WKHTMLTOPDF_CMD=Order for the PDF generation of labels (WkHTMLtoPDF must be installed on the server http://wkhtmltopdf.org/)
+OfNbTicketrPerPage=Default print label value per page (-1 to disable functionality)
+
+#LOT
+ListAssetLot=List of asset lots
+AssetLotDeleted=Lot deleted
+AssetInLot=Assets of the lot
+OFAssetLotEmpty=No lot entered for the product: %s (%s)
+OFAssetCmdFournNotFinish=Unable to complete this Production order as long as the supplier order is not received partially or totally
+
+
+# POSTE DE TRAVAIL
+AssetWorkstation=Workstation
+AssetNewWorkstation=New workstation
+AssetAuthorizeAddWorkstationTime0OnOF=Allow automatically adding to the Production order any workstation in the product nomenclature even if its necessary time is 0
+set_OF_COEF_WS=Time multiplier coefficient for adding a workstation from a product nomenclature
+AssetCreateProjectTaskOnValidation=Create project tasks at validation instead of production start
+
+# TYPES D'EQUIPEMENT
+AssetType=Asset types
+AssetNewType=New asset type
+AssetDescCumulate=This notion acts on asset stock withdrawal
+AssetDescPerishable=If the asset type is perishable, you must set a limit date on this asset
+
+#Contrôle
+AssetControl=Control
+AssetNewControl=Add Control
+ListControl=List of controls
+AssetEmptyControl=No controls to display
+AssetCreateControl=Create a control
+AssetAddControl=Adding a Control
+AssetAddControlEvent=Adding the saved control
+AssetSaveControlEvent=Changes to the Registered Control
+AssetDeleteControlEvent=Deleting the saved control
+AssetListControl=List of controls
+AssetAddControlValue=Add value for multiple choices
+AssetSaveControlValueEvent=Recorded value
+ListControlMultiple=List of values
+AssetDeleteControlValueEvent=Deleting the saved value
+AssetEmptyControlMultiple=No value to display
+AssetCreateControlMultiple=Create a value
+
+#Configuration
+DefaultWarehouseId=Inventory Default Inventory Warehouse
+DefaultWarehouseIdToMake=Default Inventory Warehouse for Production order and Asset (products to be manufactured)
+DefaultWarehouseIdNeeded=Default inventory warehouse for Production order and Asset (needed products)
+UseDefinedWarehouse=Allows you to define default warehouses for storage / destocking of asset
+ParametersWarehouse=Warehouses (if no options are used, the storage / destocking behavior will take the warehouse defined on each asset)
+CreateAssetChildrenOF=Allow the creation of child Production orders for non-stock products needed for manufacturing
+CreateAssetChildrenOFWithComposant=Restrict creation of child Production orders to products to be manufactured having components and no stock
+UsetAssetProductionAttributs=Use production fields
+CreteAssetOFOnOrderValidation= Automatically create the Production order when validating an order
+DeleteAssetOFOnOrderCancel= Automatically remove Production orders when canceling an order
+UseBatchNumberInOf=Use lot management in Production orders
+AllBatchNumberAreMandatory= Lot mandatory on all elements of Production orders
+AssetDefinedUserByWorkstation=Allowing the association of one or more users to be assigned to a workstation on a Production order
+AssetUseWorkstationByNeededInOF=Allow the ventilation of products of composition by workstation on a Production order
+AssetUseControl=Allows to define controls to be applied during the Production order process
+AssetDefinedTaskByWorkstation=Defines an operating protocol for each workstation
+UseProjectTask=Each workstation associated with a Production order will create a task for the associated project
+AssetAutoCreateProjectOnOF=Create and automatically associate a project with the Production order if none is associated (the project will have the name of the command from which the Production order comes from)
+AssetDefaultLocatlisation=Default location of assets created via Production orders
+Asset_useUniqueSerialNumber=Use unique serial number
+
+CreateAssetFromProductDescListProduct=The list contains only products with a status "On sale"
+CreateAssetFromProductErrorBadMask=If the default is "ErrorBadMask", your product is not associated with a device type. <br /> Go back to the product sheet and change its value.
+CreateAssetFromProductNumLot=This field corresponds to the lot number created in the "Asset" menu => "List of Lots" => "Create a lot of assets". To select a lot, type the beginning of the number and one or more proposals will appear.
+
+AssetOFConfirmChangeStateTitle=Disable the creation of child Production orders
+AssetOFConfirmChangeState=If you disable this feature, the parameters related to the creation / deletion of Production orders will also be disabled
+AssetMsgSaveTask=Recorded Job
+AssetErrSaveTask=Error Saving
+AssetMsgDeleteTask=Deleted task
+AssetErrDeleteTask=Error while deleting
+AssetMsgSaveControlValue=Recorded value
+AssetErrSaveControlValue=Error Saving
+AssetMsgDeleteControlValue=Deleted value
+AssetErrDeleteControlValue=Error while deleting
+AssetListWorkstation=List of workstations
+UseManualWarehouse=Allows to define manually the warehouses to be used for the storage / destocking of the asset on each Production order
+UseProjectTaskHierarchique=Create tasks hierarchically
+
+AssetAdminManagement=Asset manatement, about
+AssetAdminManagementShort=Asset management
+AssetConfigurationSaved=Configuration saved
+AssetAbout=About
+AssetDevelopedBy=Module developped by
+AssetNotAssociatedWithThatThirdParty=No asset associated to this thirdparty
+AssetEdit=Modify
+AssetDefine=Define Asset
+AssetCompoundProvided=Compound provided
+AssetSelectAsset=Select an asset
+AssetManualEdit=Manual edit
+AssetDeleteAsset=Delete asset
+AssetLoanReturn=Loan return
+AssetSupplierOrder=SUPPLIER ORDER
+AssetExpedition=SHIPMENT
+
+NewWorkStation=New workstation
+moduleWorkstationNeeded=Module Workstation required
+
+UseAssetInDoc=Use assets in proposals/orders/invoices
+
+# ASSET TYPES
+CodeMaybe=Code (optional)
+AssetNumberingMask=Numbering mask
+AssetStockManagement=Stock management
+AssetStockManagementUNIT=Unitary
+AssetStockManagementQUANTITY=Quantitative
+AssetTodo=(to set)
+AssetUnitType=Unit type
+Assetunit_s=unit(s)
+AssetTypeMaxCapacity=Maximum capacity
+AssetTypeDefaultCapacity=Default capacity
+AssetTypePointChute=Falling point
+AssetTypePerishable=Perishable
+AssetTypeCumulative=Cumulative
+AssetTypeReusable=Reusable
+AssetTypeFields=Fields
+AssetTypeFieldMove=Move
+AssetTypeFieldOptions=Options
+AssetTypeFieldRequired=Required
+AssetTypeFieldVisibleInList=Visible in list
+AssetTypeFieldConcatenateToLabel=Concatenate to label
+AssetTypeFieldType_chaine=Text 30c.
+AssetTypeFieldType_chaine100=Text 100c.
+AssetTypeFieldType_chaine255=Text 255c.
+AssetTypeFieldType_text=Long text
+AssetTypeFieldType_entier=Integer
+AssetTypeFieldType_float=Float
+AssetTypeFieldType_liste=List
+AssetTypeFieldType_date=Date
+AssetTypeFieldType_checkbox=Checkbox
+AssetTypeFieldType_sellist=Select from table
+AssetTypeFieldOptionsTip=If field type is "List", separate the elements with a ';'.<br><u>For example :</u> put "Ford;Citroën;Peugeot" in "Options".<br /><br />If field type is "Select from table", the syntax is "table_name:label_field:id_field::filter".<br><u>For example :</u> put "user:login:rowid::entity=1" in "Options".
+AssetTypeModificationsDone=Modifications done
+AssetTypeFieldCreated=The field has been successfully created
+AssetTypeFieldDeleted=The field has been successfully deleted
+AssetTypeFieldCouldNotBeDeleted=The field could not be deleted
+AssetTypePerishableDLUOdefault=Optimal Limit of Use Date by default to +
+AssetListsByType=Lists by type
+AssetNewWithType=Create an asset with this type
+Asset_HideNoStockOnList=Hide equipment that has no more stock in the list
+OF=PO
+set_ASSET_COEF_WS=Time multiplier coefficient when adding a position from a product nomenclature
+ASSET_MAKE_STOCK_MOVEMENTS_AT_CREATION_DELETION=Automatically perform stock movements when creating, cloning or deleting equipment, or modifying its warehouse
+StockMovementAssetCreation=Creation of equipment %s
+StockMovementAssetDeletion=Removal of equipment %s
+StockMovementAssetTransfer=Transfer of equipment %s

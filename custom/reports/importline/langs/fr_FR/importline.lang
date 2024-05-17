@@ -1,0 +1,12 @@
+# Dolibarr language file - fr_FR - importline
+CHARSET=UTF-8
+
+Module432439Name = Import lignes (devis/commandes/factures)
+Module432439Desc= Importer dans vos devis et commandes des lignes d'autres devis ou commandes
+newlinefromother = Validez l'ajout grâce au bouton "OK". Vous pouvez également ajouter des lignes d'un autre document en le sélectionnant dans la liste déroulante correspondante.
+selectpropal = Sélectionnez la proposition commerciale source :
+selectorder = Sélectionnez la commande source :
+selectinvoice = Sélectionnez la facture source :
+ImportLineFrom = Importer ligne(s)
+
+ImportlineAbout=A propos du module
