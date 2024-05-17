@@ -5,11 +5,11 @@
 // Take a look at conf.php.example file for an example of conf.php file
 // and explanations for all possibles parameters.
 ///home/unboxerpcrm/public_html/foardpaneldolibarr
-$dolibarr_main_url_root='http://172.26.5.70:8088/master_dev/';
-$dolibarr_main_document_root='/var/www/html/master_dev';
+$dolibarr_main_url_root='http://172.26.5.70:8088/dolibarr/';
+$dolibarr_main_document_root='/var/www/html/dolibarr';
 $dolibarr_main_url_root_alt='/custom';
-$dolibarr_main_document_root_alt='/var/www/html/master_dev/custom';
-$dolibarr_main_data_root='/var/www/html/master_dev/doc';
+$dolibarr_main_document_root_alt='/var/www/html/dolibarr/custom';
+$dolibarr_main_data_root='/var/www/html/dolibarr/doc';
 $dolibarr_main_db_host='localhost';
 $dolibarr_main_db_port='3306';
 $dolibarr_main_db_name='master_dev';
